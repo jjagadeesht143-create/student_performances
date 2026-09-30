@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Analysis - Student Performance System{% endblock %}
+{% block content %}
+<section class="analysis-hero mb-4">
+  <div>
+    <span class="eyebrow">PERFORMANCE INTELLIGENCE</span>
+    <h1 class="mb-2">Data Analysis</h1>
+    <p class="lead mb-0">Explore attendance, previous scores, and the factors associated with student performance.</p>
+  </div>
+  <div class="hero-mark"><i class="fa-solid fa-chart-line"></i></div>
+</section>
+
+{% if db_error %}
+<div class="alert alert-warning"><i class="fa-solid fa-triangle-exclamation me-2"></i>{{ db_error }}</div>
+{% endif %}
+
+<form method="get" class="card filter-panel mb-4">
+  <div class="card-body">
+    <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap mb-3">
+      <div><h5 class="mb-1">Filter the cohort</h5><p class="text-secondary small mb-0">All KPIs and charts update from the selected records.</p></div>
+      <a href="{{ url_for('analysis') }}" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-rotate-left me-1"></i>Reset</a>
+    </div>
+    <div class="row g-3">
+      <div class="col-sm-6 col-lg-2"><label class="form-label" for="gender">Gender</label><select class="form-select" id="gender" name="gender"><option value="">All genders</option>{% for value in filter_options.genders %}<option value="{{ value }}" {% if filters.gender == value %}selected{% endif %}>{{ value }}</option>{% endfor %}</select></div>
+      <div class="col-sm-6 col-lg-3"><label class="form-label" for="parental_education">Parental education</label><select class="form-select" id="parental_education" name="parental_education"><option value="">All levels</option>{% for value in filter_options.parental_education %}<option value="{{ value }}" {% if filters.parental_education == value %}selected{% endif %}>{{ value }}</option>{% endfor %}</select></div>
+      <div class="col-sm-6 col-lg-2"><label class="form-label" for="extracurricular">Extracurricular</label><select class="form-select" id="extracurricular" name="extracurricular"><option value="">All students</option><option value="Yes" {% if filters.extracurricular == 'Yes' %}selected{% endif %}>Participates</option><option value="No" {% if filters.extracurricular == 'No' %}selected{% endif %}>Does not participate</option></select></div>
+      <div class="col-sm-6 col-lg-2"><label class="form-label" for="attendance_min">Attendance min</label><input class="form-control" id="attendance_min" name="attendance_min" type="number" min="0" max="100" step="1" value="{{ filters.attendance_min if filters.attendance_min is not none else '' }}" placeholder="0%"></div>
+      <div class="col-sm-6 col-lg-2"><label class="form-label" for="attendance_max">Attendance max</label><input class="form-control" id="attendance_max" name="attendance_max" type="number" min="0" max="100" step="1" value="{{ filters.attendance_max if filters.attendance_max is not none else '' }}" placeholder="100%"></div>
+      <div class="col-sm-6 col-lg-2"><label class="form-label" for="score_min">Score min</label><input class="form-control" id="score_min" name="score_min" type="number" min="0" max="100" step="1" value="{{ filters.score_min if filters.score_min is not none else '' }}" placeholder="0"></div>
+      <div class="col-sm-6 col-lg-2"><label class="form-label" for="score_max">Score max</label><input class="form-control" id="score_max" name="score_max" type="number" min="0" max="100" step="1" value="{{ filters.score_max if filters.score_max is not none else '' }}" placeholder="100"></div>
+      <div class="col-sm-6 col-lg-1 d-flex align-items-end"><button class="btn btn-primary w-100" type="submit" title="Apply filters"><i class="fa-solid fa-filter"></i><span class="visually-hidden">Apply filters</span></button></div>
+    </div>
+  </div>
+</form>
+
+<div class="row g-3 mb-4">
+  {% for label, value, icon, suffix in [
+    ('Students', analysis.kpis.total_students, 'fa-users', ''),
+    ('Average score', analysis.kpis.avg_score, 'fa-chart-line', ''),
+    ('Average attendance', analysis.kpis.avg_attendance, 'fa-calendar-check', '%'),
+    ('Pass rate', analysis.kpis.pass_percentage, 'fa-circle-check', '%'),
+    ('Median score', analysis.kpis.median_score, 'fa-arrows-to-circle', ''),
+    ('At risk', analysis.kpis.at_risk, 'fa-triangle-exclamation', '')
+  ] %}
+  <div class="col-6 col-xl-2"><div class="card kpi-card h-100"><div class="card-body"><div class="kpi-icon"><i class="fa-solid {{ icon }}"></i></div><div class="kpi-label">{{ label }}</div><div class="kpi-value">{{ value }}{{ suffix }}</div></div></div></div>
+  {% endfor %}
+</div>
+
+<div class="data-note mb-4"><i class="fa-solid fa-circle-info"></i><span>Score analysis uses <strong>previous_score</strong>, the score field available in the current database schema. At-risk means previous score below 50 or attendance below 75%.</span></div>
+
+{% if not analysis.has_data %}
+<div class="empty-state card mb-4"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>No matching students</h3><p>Try widening the filters or add student records to begin analysis.</p></div>
+{% endif %}
+
+{% if analysis.has_data %}
+<div class="chart-grid">
+  <div class="card chart-card"><div class="card-body"><h5>Score distribution</h5><p class="chart-subtitle">Previous score ranges</p><div class="chart-wrap" data-chart-wrap="scoreChart"><div class="chart-loading"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span>Preparing chart</div><canvas id="scoreChart"></canvas></div></div></div>
+  <div class="card chart-card"><div class="card-body"><h5>Attendance distribution</h5><p class="chart-subtitle">Students by attendance range</p><div class="chart-wrap" data-chart-wrap="attendanceChart"><div class="chart-loading"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span>Preparing chart</div><canvas id="attendanceChart"></canvas></div></div></div>
+  <div class="card chart-card"><div class="card-body"><h5>Performance category</h5><p class="chart-subtitle">Categories derived from previous score</p><div class="chart-wrap" data-chart-wrap="categoryChart"><div class="chart-loading"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span>Preparing chart</div><canvas id="categoryChart"></canvas></div></div></div>
+  <div class="card chart-card"><div class="card-body"><h5>Average score by gender</h5><p class="chart-subtitle">Filtered group comparison</p><div class="chart-wrap" data-chart-wrap="genderChart">{% if analysis.charts.gender.labels %}<div class="chart-loading"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span>Preparing chart</div><canvas id="genderChart"></canvas>{% else %}<div class="chart-empty">Gender data is unavailable for this cohort.</div>{% endif %}</div></div></div>
+  <div class="card chart-card"><div class="card-body"><h5>Parental education</h5><p class="chart-subtitle">Average score by education level</p><div class="chart-wrap" data-chart-wrap="parentChart">{% if analysis.charts.parental_education.labels %}<div class="chart-loading"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span>Preparing chart</div><canvas id="parentChart"></canvas>{% else %}<div class="chart-empty">Parental education data is unavailable for this cohort.</div>{% endif %}</div></div></div>
+  <div class="card chart-card"><div class="card-body"><h5>Attendance vs score</h5><p class="chart-subtitle">Each point represents one student</p><div class="chart-wrap" data-chart-wrap="scatterChart"><div class="chart-loading"><span class="spinner-border spinner-border-sm" aria-hidden="true"></span>Preparing chart</div><canvas id="scatterChart"></canvas></div></div></div>
+</div>
+{% endif %}
+
+<section class="card insights-card mt-4"><div class="card-body"><div class="section-heading"><div class="kpi-icon"><i class="fa-solid fa-lightbulb"></i></div><div><h5 class="mb-1">Key insights</h5><p class="chart-subtitle mb-0">Generated from the current filtered cohort</p></div></div><div class="insights-list">{% for insight in analysis.insights %}<div class="insight-item"><i class="fa-solid fa-arrow-trend-up"></i><span>{{ insight }}</span></div>{% endfor %}</div></div></section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script>
+  const chartData = {{ analysis.charts | tojson }};
+  const chartColors = { navy: '#12304a', teal: '#0f766e', gold: '#d97706', coral: '#dc5a4f', blue: '#2d6cdf', pale: '#dce9f3' };
+  const baseOptions = { responsive: true, maintainAspectRatio: false, animation: { duration: 500 }, plugins: { legend: { display: false }, tooltip: { displayColors: false, callbacks: { label: context => ` ${context.formattedValue}` } } }, scales: { y: { beginAtZero: true, ticks: { precision: 0 }, grid: { color: '#e9eff4' } }, x: { grid: { display: false } } } };
+  function finishChart(id) { const loading = document.querySelector(`[data-chart-wrap="${id}"] .chart-loading`); if (loading) loading.remove(); }
+  function chartError(id) { const wrap = document.querySelector(`[data-chart-wrap="${id}"]`); if (wrap) wrap.innerHTML = '<div class="chart-empty chart-error"><i class="fa-solid fa-triangle-exclamation"></i><span>Chart unavailable. Refresh to try again.</span></div>'; }
+  function makeBar(id, data, color) { const element = document.getElementById(id); if (!element) return; new Chart(element, { type: 'bar', data: { labels: data.labels, datasets: [{ data: data.values, backgroundColor: color, borderRadius: 6, maxBarThickness: 36 }] }, options: baseOptions }); finishChart(id); }
+  if (typeof Chart === 'undefined') { document.querySelectorAll('.chart-loading').forEach(item => { item.className = 'chart-empty chart-error'; item.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i><span>Charts could not load. Check your connection and refresh.</span>'; }); } else {
+  makeBar('scoreChart', chartData.score_distribution, chartColors.blue);
+  makeBar('attendanceChart', chartData.attendance_distribution, chartColors.teal);
+  makeBar('categoryChart', chartData.categories, [chartColors.coral, chartColors.gold, chartColors.blue, chartColors.teal]);
+  makeBar('genderChart', chartData.gender, chartColors.navy);
+  makeBar('parentChart', chartData.parental_education, chartColors.gold);
+  const scatterElement = document.getElementById('scatterChart');
+  if (scatterElement) { new Chart(scatterElement, { type: 'scatter', data: { datasets: [{ label: 'Students', data: chartData.scatter, backgroundColor: chartColors.coral, pointRadius: 4 }] }, options: { ...baseOptions, plugins: { ...baseOptions.plugins, tooltip: { callbacks: { label: context => ` Attendance ${context.parsed.x}% | Score ${context.parsed.y}` } } }, scales: { x: { title: { display: true, text: 'Attendance (%)' }, min: 0, max: 100 }, y: { title: { display: true, text: 'Previous score' }, min: 0, max: 100 } } } }); finishChart('scatterChart'); }
+  }
+</script>
+</div>
+{% endblock %}

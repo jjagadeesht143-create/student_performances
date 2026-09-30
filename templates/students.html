@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Students - Student Performance System{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+  <div>
+    <h2 class="mb-0">Students</h2>
+  </div>
+  <a href="{{ url_for('add_student') }}" class="btn btn-primary"><i class="fa-solid fa-plus me-1"></i>Add Student</a>
+</div>
+
+{% if db_error %}
+<div class="alert alert-warning">Could not load students: {{ db_error }}</div>
+{% endif %}
+
+<form method="get" class="row g-2 mb-3">
+  <div class="col-md-4">
+    <input type="text" name="q" value="{{ search }}" class="form-control" placeholder="Search by name...">
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+  </div>
+  {% if search %}
+  <div class="col-auto">
+    <a href="{{ url_for('students') }}" class="btn btn-outline-danger">Clear</a>
+  </div>
+  {% endif %}
+</form>
+
+<div class="table-responsive">
+<table class="table table-hover align-middle bg-white">
+  <thead class="table-dark">
+    <tr>
+      <th>No.</th><th>Name</th><th>Age</th><th>Gender</th>
+      <th>Study Time</th><th>Attendance</th><th>Previous Score</th>
+      <th>Assignment Score</th><th>Parental Ed.</th><th>Extracurricular</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for s in students %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.age }}</td>
+      <td>{{ s.gender }}</td>
+      <td>{{ s.study_time }}</td>
+      <td>{{ s.attendance }}</td>
+      <td>{{ s.previous_score }}</td>
+      <td>{{ s.assignment_score }}</td>
+      <td>{{ s.parental_education }}</td>
+      <td>{{ s.extracurricular_activity }}</td>
+      <td>
+        <a href="{{ url_for('edit_student', student_id=s.id) }}" class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-pen"></i></a>
+        <form method="post" action="{{ url_for('delete_student', student_id=s.id) }}" class="d-inline" onsubmit="return confirm('Delete this student?');">
+          <button type="submit" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+        </form>
+      </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="11" class="text-center text-muted py-4">No students found.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

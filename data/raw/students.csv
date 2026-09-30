@@ -1,0 +1,506 @@
+student_id,name,age,gender,study_time,attendance,previous_score,assignment_score,parental_education,extracurricular_activity,final_score
+1,Student_1,15,Female,4.3,79.5,80.7,71.3,Bachelors,Yes,66.7
+2,Student_2,18,Female,6.8,95.5,44.0,59.2,High School,Yes,62.6
+3,Student_3,17,Male,0.5,84.9,55.1,71.2,High School,Yes,57.3
+4,Student_4,16,Male,1.5,89.4,93.8,58.9,Bachelors,No,67.4
+5,Student_5,16,Male,2.7,69.2,81.9,,Bachelors,No,65.2
+6,Student_6,18,Female,7.4,86.3,66.5,73.3,Bachelors,Yes,80.3
+7,Student_7,15,Female,5.1,88.7,50.9,72.1,Graduate,Yes,71.9
+8,Student_8,17,Male,6.0,73.1,57.1,78.1,High School,Yes,71.1
+9,Student_9,15,Male,2.2,86.7,66.1,100.0,Graduate,Yes,78.0
+10,Student_10,15,Female,2.3,86.8,65.6,73.9,High School,No,64.8
+11,Student_11,17,Male,5.4,73.4,63.6,76.8,Bachelors,No,67.1
+12,Student_12,18,Female,4.6,66.5,64.5,,Graduate,No,74.0
+13,Student_13,17,Male,5.6,65.8,61.8,52.0,Graduate,No,65.4
+14,Student_14,18,Male,4.1,81.0,43.4,92.2,Bachelors,No,67.8
+15,Student_15,17,Female,5.1,83.9,57.3,57.1,Bachelors,No,65.7
+16,Student_16,18,Male,4.8,70.5,78.7,55.4,High School,No,63.3
+17,Student_17,17,Male,6.1,80.3,44.5,69.5,Bachelors,No,60.8
+18,Student_18,15,Male,6.1,86.8,62.2,68.7,Bachelors,Yes,77.3
+19,Student_19,18,Male,1.3,87.4,52.7,57.4,Graduate,No,73.2
+20,Student_20,16,Male,0.5,98.6,66.7,65.7,Bachelors,Yes,58.6
+21,Student_21,17,Male,6.5,95.3,59.2,87.2,High School,Yes,76.7
+22,Student_22,16,Male,6.9,68.0,87.2,58.7,Bachelors,No,70.2
+23,Student_23,15,Male,2.5,100.0,72.6,50.5,High School,No,57.3
+24,Student_24,18,Female,0.8,73.6,45.3,83.2,High School,Yes,59.9
+25,Student_25,18,Female,4.7,92.5,75.1,76.9,High School,Yes,68.4
+26,Student_26,17,Male,6.4,80.8,53.4,61.3,Bachelors,Yes,65.9
+27,Student_27,16,Male,8.1,75.1,56.3,47.8,High School,No,55.6
+28,Student_28,18,Female,5.5,58.3,69.7,59.6,High School,Yes,56.8
+29,Student_29,17,Female,3.8,77.9,57.6,69.2,High School,No,48.1
+30,Student_30,16,Female,2.7,61.3,78.4,86.3,Graduate,No,69.5
+31,Student_31,16,Male,4.5,91.6,53.4,55.5,Bachelors,No,79.7
+32,Student_32,15,Male,3.9,98.2,55.7,68.8,High School,No,61.0
+33,Student_33,15,Male,2.5,70.4,55.2,79.5,High School,Yes,46.3
+34,Student_34,17,Male,8.6,83.6,56.5,36.7,Bachelors,Yes,76.8
+35,Student_35,18,Female,8.1,71.3,81.5,84.5,High School,No,73.4
+36,Student_36,15,Male,6.8,72.5,74.4,53.4,Bachelors,Yes,79.2
+37,Student_37,18,Male,2.7,89.3,90.6,74.6,Bachelors,Yes,70.8
+38,Student_38,18,Male,6.2,79.5,99.0,73.5,Graduate,Yes,80.9
+39,Student_39,16,Female,5.8,100.0,49.5,85.2,High School,Yes,71.6
+40,Student_40,17,Male,5.4,74.2,66.1,77.7,Bachelors,Yes,75.3
+41,Student_41,15,Female,7.0,92.0,47.4,36.7,High School,No,60.4
+42,Student_42,18,Male,5.8,81.2,53.3,59.0,Graduate,No,64.7
+43,Student_43,17,Female,6.0,89.5,55.5,71.9,Graduate,No,72.2
+44,Student_44,16,Male,5.8,74.6,49.1,67.3,Bachelors,No,56.0
+45,Student_45,15,Female,5.2,79.4,49.2,76.7,Bachelors,Yes,69.4
+46,Student_46,18,Female,0.9,78.6,62.8,81.1,High School,No,43.4
+47,Student_47,16,Female,4.7,70.0,46.7,78.5,Graduate,No,61.4
+48,Student_48,18,Female,3.4,87.9,77.6,67.0,Bachelors,Yes,73.9
+49,Student_49,17,Female,1.9,87.8,51.2,44.2,High School,No,50.7
+50,Student_50,18,Female,7.9,87.1,100.0,,Bachelors,Yes,91.5
+51,Student_51,18,Female,8.0,98.4,58.2,75.8,Bachelors,Yes,81.3
+52,Student_52,15,Male,7.2,97.4,66.1,54.7,Graduate,Yes,87.0
+53,Student_53,16,Female,5.0,75.5,45.6,78.8,Bachelors,Yes,70.6
+54,Student_54,16,Female,7.2,84.5,90.6,82.7,Bachelors,Yes,88.2
+55,Student_55,16,Female,4.5,72.5,81.8,71.8,Bachelors,No,74.1
+56,Student_56,15,Male,4.9,80.3,69.5,27.1,High School,No,61.1
+57,Student_57,17,Male,2.3,72.8,44.8,52.1,High School,Yes,45.6
+58,Student_58,15,Female,5.3,99.4,68.2,96.4,High School,No,68.0
+59,Student_59,17,Male,4.6,84.4,48.2,62.3,Bachelors,Yes,66.0
+60,Student_60,17,Male,1.9,77.4,86.9,,Bachelors,No,66.8
+61,Student_61,18,Male,4.4,94.3,77.1,87.3,Bachelors,Yes,84.2
+62,Student_62,17,Male,4.3,54.0,66.4,70.2,High School,Yes,52.6
+63,Student_63,16,Male,8.1,55.8,30.0,85.5,High School,No,55.8
+64,Student_64,18,Male,6.3,89.6,50.2,73.9,Bachelors,No,73.1
+65,Student_65,16,Male,4.5,80.7,75.3,76.4,High School,No,66.5
+66,Student_66,16,Male,5.0,83.0,83.2,75.1,High School,No,59.3
+67,Student_67,18,Male,4.6,64.1,81.6,79.8,Bachelors,No,70.5
+68,Student_68,16,Female,4.1,79.7,41.1,100.0,High School,Yes,52.6
+69,Student_69,15,Male,2.3,100.0,69.5,83.6,High School,Yes,61.9
+70,Student_70,16,Female,4.2,89.9,80.2,47.9,Bachelors,Yes,77.0
+71,Student_71,18,Female,3.0,82.0,40.1,76.3,Graduate,Yes,73.1
+72,Student_72,15,Male,2.0,74.7,64.9,86.0,High School,Yes,52.4
+73,Student_73,16,Male,5.5,75.3,69.1,86.8,Bachelors,No,69.9
+74,Student_74,15,Female,5.3,54.4,60.5,64.0,Graduate,Yes,64.6
+75,Student_75,17,Female,0.9,83.1,37.2,86.3,Bachelors,No,63.5
+76,Student_76,16,Female,4.3,90.1,60.1,,Bachelors,No,63.7
+77,Student_77,16,Female,6.5,61.1,60.1,100.0,Bachelors,No,68.6
+78,Student_78,15,Female,6.6,72.1,62.8,59.5,Bachelors,No,76.4
+79,Student_79,17,Female,6.6,66.1,56.5,62.9,Bachelors,Yes,64.5
+80,Student_80,17,Male,4.6,68.4,58.4,65.7,Bachelors,Yes,67.1
+81,Student_81,18,Female,2.8,80.6,64.4,63.1,High School,No,47.8
+82,Student_82,16,Male,2.3,55.0,71.6,57.5,High School,No,48.6
+83,Student_83,15,Female,5.2,87.4,60.4,31.3,Bachelors,Yes,52.8
+84,Student_84,18,Female,5.3,89.0,58.9,63.9,High School,Yes,60.3
+85,Student_85,17,Male,7.1,77.0,66.4,75.2,Bachelors,No,78.8
+86,Student_86,17,Female,6.7,50.2,36.2,63.1,Bachelors,No,55.7
+87,Student_87,15,Male,4.2,68.0,72.2,97.1,Graduate,Yes,72.3
+88,Student_88,16,Female,2.0,94.8,65.0,70.2,High School,Yes,57.1
+89,Student_89,18,Male,3.9,46.7,65.6,88.1,Bachelors,No,58.3
+90,Student_90,18,Female,4.9,75.8,79.4,73.7,Bachelors,Yes,74.1
+91,Student_91,16,Male,4.1,65.8,35.7,81.6,High School,No,59.1
+92,Student_92,18,Female,3.3,89.7,35.4,73.9,High School,Yes,41.5
+93,Student_93,18,Female,5.0,71.9,69.1,89.2,High School,No,62.1
+94,Student_94,16,Female,3.5,84.8,64.9,70.8,High School,Yes,64.3
+95,Student_95,18,Female,3.2,86.8,67.6,76.9,High School,Yes,64.3
+96,Student_96,16,Female,5.1,100.0,58.1,75.1,Bachelors,No,74.2
+97,Student_97,15,Female,3.7,77.6,75.0,66.0,Bachelors,No,66.3
+98,Student_98,17,Male,5.0,,79.0,75.7,High School,No,66.8
+99,Student_99,17,Female,5.0,62.2,72.3,100.0,High School,Yes,66.5
+100,Student_100,15,Male,2.2,94.3,61.1,66.2,High School,No,56.8
+101,Student_101,18,Female,3.5,70.9,33.4,75.9,Bachelors,No,60.9
+102,Student_102,15,Male,7.4,73.3,76.5,87.6,High School,No,71.3
+103,Student_103,18,Female,2.2,79.7,83.3,86.0,Bachelors,Yes,68.7
+104,Student_104,15,Female,0.5,61.2,74.7,70.2,High School,No,50.5
+105,Student_105,18,Male,0.8,82.7,51.8,36.6,High School,No,52.5
+106,Student_106,18,Female,4.6,91.6,75.1,77.2,Graduate,No,74.2
+107,Student_107,18,Female,4.6,83.5,77.9,38.9,High School,Yes,68.8
+108,Student_108,17,Female,4.3,60.9,88.4,90.6,High School,Yes,76.9
+109,Student_109,16,Male,6.9,78.5,51.9,72.4,High School,Yes,68.0
+110,Student_110,17,Female,0.5,88.9,61.6,84.0,Graduate,No,60.6
+111,Student_111,16,Female,5.3,57.5,76.2,57.4,Bachelors,No,60.8
+112,Student_112,18,Male,7.6,,65.9,48.3,Bachelors,Yes,70.7
+113,Student_113,17,Male,2.2,90.5,48.2,73.7,Graduate,No,66.7
+114,Student_114,16,Male,3.7,83.2,71.2,69.5,High School,No,64.2
+115,Student_115,17,Female,3.0,84.9,73.7,63.1,Graduate,Yes,70.1
+116,Student_116,17,Male,2.7,100.0,66.3,71.2,High School,Yes,58.6
+117,Student_117,15,Female,3.8,85.6,68.3,100.0,Bachelors,No,66.3
+118,Student_118,15,Female,7.4,87.9,61.1,81.7,Bachelors,No,90.2
+119,Student_119,15,Male,8.2,100.0,87.2,84.7,High School,Yes,87.6
+120,Student_120,15,Female,3.8,77.4,51.5,81.8,Graduate,No,60.6
+121,Student_121,16,Female,8.3,70.4,56.2,90.7,High School,No,81.6
+122,Student_122,17,Male,4.6,85.1,65.2,67.3,Graduate,No,71.6
+123,Student_123,17,Male,8.0,85.3,78.2,41.2,High School,No,75.0
+124,Student_124,16,Male,4.3,73.7,42.5,67.4,Bachelors,No,56.7
+125,Student_125,18,Male,4.8,67.6,45.3,81.4,Graduate,No,62.0
+126,Student_126,17,Male,5.2,100.0,34.4,56.4,High School,Yes,60.4
+127,Student_127,15,Female,10.0,83.9,65.5,67.5,Graduate,No,76.6
+128,Student_128,18,Male,6.2,71.2,48.2,60.3,Bachelors,Yes,63.7
+129,Student_129,17,Male,3.1,91.0,59.2,91.0,Bachelors,No,69.2
+130,Student_130,17,Female,6.4,78.7,74.9,80.5,High School,Yes,85.5
+131,Student_131,17,Female,3.8,77.0,55.4,79.1,Bachelors,No,63.1
+132,Student_132,17,Female,3.5,86.7,68.5,78.7,Bachelors,Yes,55.3
+133,Student_133,15,Female,6.3,64.5,60.5,69.5,Bachelors,Yes,67.2
+134,Student_134,17,Male,4.6,84.2,75.1,72.8,High School,Yes,85.7
+135,Student_135,18,Male,5.1,100.0,72.1,53.4,High School,No,73.2
+136,Student_136,16,Female,4.5,85.6,54.6,39.4,Graduate,No,56.7
+137,Student_137,17,Female,5.2,75.5,62.5,72.1,High School,Yes,69.0
+138,Student_138,15,Female,5.3,,80.7,74.5,Bachelors,No,68.2
+139,Student_139,16,Male,0.6,75.1,70.9,86.9,Graduate,No,53.4
+140,Student_140,16,Female,5.8,77.0,44.0,92.0,High School,Yes,64.8
+141,Student_141,18,Female,2.5,75.5,74.8,92.0,High School,No,63.5
+142,Student_142,15,Male,1.6,91.0,48.7,56.0,Bachelors,Yes,44.4
+143,Student_143,16,Female,4.4,59.2,86.2,65.1,High School,Yes,56.8
+144,Student_144,16,Female,4.7,90.3,80.4,76.7,Bachelors,No,74.2
+145,Student_145,18,Male,3.1,75.4,69.3,100.0,Bachelors,Yes,67.4
+146,Student_146,18,Male,6.2,84.5,67.4,90.7,Bachelors,No,78.8
+147,Student_147,15,Female,1.8,66.5,61.9,85.7,High School,No,47.0
+148,Student_148,15,Male,3.7,95.9,75.2,64.6,Bachelors,No,73.3
+149,Student_149,18,Male,3.3,94.9,59.4,57.6,Bachelors,No,55.2
+150,Student_150,15,Male,4.4,91.5,68.5,81.0,High School,No,78.4
+151,Student_151,18,Male,5.1,61.8,78.1,54.6,Bachelors,No,52.9
+152,Student_152,16,Female,2.5,89.9,56.6,66.7,Graduate,Yes,58.4
+153,Student_153,18,Female,5.9,84.9,55.8,68.4,Bachelors,Yes,72.9
+154,Student_154,16,Male,4.6,60.7,47.1,92.3,Bachelors,No,71.3
+155,Student_155,16,Female,0.7,79.7,49.0,65.0,High School,Yes,51.0
+156,Student_156,17,Female,0.6,84.4,37.6,35.9,High School,Yes,44.7
+157,Student_157,15,Male,4.5,86.7,75.9,77.1,High School,Yes,70.8
+158,Student_158,17,Female,4.1,82.1,92.1,60.2,High School,No,60.9
+159,Student_159,17,Male,4.3,83.5,86.4,70.6,Graduate,Yes,73.7
+160,Student_160,18,Female,4.4,97.7,40.6,,High School,Yes,55.7
+161,Student_161,18,Female,5.0,94.7,75.9,66.2,Graduate,Yes,70.2
+162,Student_162,17,Female,6.4,45.6,86.3,81.1,High School,Yes,71.5
+163,Student_163,16,Male,2.3,76.2,58.1,48.5,High School,No,43.0
+164,Student_164,16,Female,2.2,78.0,66.5,62.8,Bachelors,Yes,61.8
+165,Student_165,16,Male,2.3,59.0,34.9,79.6,High School,No,38.0
+166,Student_166,18,Male,5.1,81.1,69.0,61.4,Bachelors,No,68.9
+167,Student_167,16,Male,7.0,95.0,49.0,47.5,Graduate,Yes,70.2
+168,Student_168,15,Female,3.6,67.0,68.0,79.4,Graduate,No,74.1
+169,Student_169,16,Male,0.5,84.0,41.6,85.7,High School,No,51.9
+170,Student_170,15,Female,1.1,69.0,73.1,69.4,Bachelors,No,62.9
+171,Student_171,15,Female,2.8,71.9,80.4,42.5,High School,Yes,51.9
+172,Student_172,15,Male,3.4,97.7,53.3,79.9,Graduate,Yes,71.6
+173,Student_173,18,Male,3.7,73.5,47.9,46.8,Bachelors,No,47.2
+174,Student_174,17,Male,4.6,85.5,32.7,74.3,High School,No,54.8
+175,Student_175,17,Female,3.9,57.5,61.0,57.6,High School,No,50.5
+176,Student_176,16,Female,6.6,100.0,56.3,53.8,High School,No,64.0
+177,Student_177,17,Male,3.1,,41.7,63.8,High School,Yes,46.3
+178,Student_178,15,Female,2.8,77.8,71.8,67.4,Graduate,No,56.2
+179,Student_179,18,Male,5.5,86.9,58.3,61.0,Bachelors,No,52.9
+180,Student_180,17,Female,1.4,63.1,48.9,78.2,Graduate,No,47.2
+181,Student_181,18,Female,5.3,94.2,56.7,63.8,High School,Yes,71.1
+182,Student_182,15,Female,4.7,76.1,81.1,83.7,Bachelors,Yes,64.6
+183,Student_183,16,Female,4.2,77.6,74.0,73.9,High School,No,56.2
+184,Student_184,17,Female,7.7,74.1,63.0,60.2,Bachelors,No,81.6
+185,Student_185,16,Male,3.3,73.0,74.3,57.9,High School,No,53.8
+186,Student_186,16,Male,8.6,88.3,47.6,46.9,High School,Yes,71.4
+187,Student_187,15,Male,4.0,83.1,65.5,74.1,Bachelors,Yes,72.0
+188,Student_188,16,Female,1.9,87.8,67.2,65.0,High School,No,61.0
+189,Student_189,15,Female,4.6,79.9,58.0,36.8,Bachelors,Yes,50.6
+190,Student_190,16,Female,2.3,86.2,71.5,62.5,Bachelors,Yes,62.0
+191,Student_191,17,Female,3.0,75.0,53.3,57.4,High School,No,42.2
+192,Student_192,17,Male,5.3,100.0,72.6,92.1,Graduate,Yes,99.1
+193,Student_193,17,Female,5.6,61.2,73.3,46.2,Bachelors,No,52.0
+194,Student_194,16,Male,3.3,95.1,30.0,49.8,Graduate,Yes,52.2
+195,Student_195,18,Male,6.5,96.4,82.9,85.5,Bachelors,No,76.9
+196,Student_196,15,Female,6.8,69.8,30.0,89.0,Bachelors,No,55.8
+197,Student_197,16,Female,7.4,100.0,55.8,59.6,Bachelors,No,82.7
+198,Student_198,15,Female,5.6,91.9,80.4,61.2,Graduate,No,91.5
+199,Student_199,16,Male,7.2,91.7,60.2,78.6,Bachelors,Yes,76.0
+200,Student_200,18,Female,0.7,80.3,43.0,37.4,High School,No,32.3
+201,Student_201,16,Male,3.9,77.4,48.6,43.9,High School,No,37.8
+202,Student_202,18,Female,2.8,77.5,80.4,66.1,Bachelors,No,62.1
+203,Student_203,16,Female,4.7,84.7,36.2,91.7,High School,No,59.8
+204,Student_204,17,Male,3.4,96.8,81.9,63.9,High School,No,63.1
+205,Student_205,16,Male,4.2,82.2,64.2,71.4,High School,No,64.0
+206,Student_206,16,Male,8.3,69.1,47.1,85.9,Bachelors,No,74.8
+207,Student_207,18,Female,4.2,,56.3,99.5,High School,Yes,69.4
+208,Student_208,18,Male,5.3,91.1,49.7,61.9,Bachelors,No,63.5
+209,Student_209,16,Female,4.0,87.9,78.0,69.8,Bachelors,No,63.0
+210,Student_210,18,Female,4.7,88.9,76.0,95.5,Graduate,Yes,85.5
+211,Student_211,16,Female,4.5,76.7,39.2,48.7,High School,No,51.4
+212,Student_212,17,Male,5.4,68.9,58.9,84.4,Bachelors,No,72.3
+213,Student_213,18,Female,6.8,69.6,52.1,55.7,Bachelors,Yes,70.3
+214,Student_214,16,Male,7.8,60.4,84.4,71.4,Bachelors,No,66.8
+215,Student_215,17,Female,5.1,82.8,44.7,66.6,Bachelors,No,53.9
+216,Student_216,16,Female,5.7,79.0,89.1,56.6,High School,No,64.8
+217,Student_217,15,Female,2.2,74.7,64.5,56.2,Graduate,Yes,53.9
+218,Student_218,15,Female,4.3,44.5,47.6,73.9,High School,No,54.4
+219,Student_219,16,Male,6.4,65.0,54.8,83.9,Graduate,Yes,74.8
+220,Student_220,18,Female,6.2,93.5,53.0,68.2,Bachelors,No,77.2
+221,Student_221,15,Male,4.9,72.0,45.9,71.0,High School,Yes,61.8
+222,Student_222,16,Male,6.3,84.3,66.4,78.0,Bachelors,No,75.2
+223,Student_223,17,Male,5.5,63.3,46.6,56.4,High School,No,61.4
+224,Student_224,15,Male,6.9,97.3,32.3,80.4,Bachelors,No,73.6
+225,Student_225,17,Male,5.1,78.3,59.3,81.5,Bachelors,No,68.4
+226,Student_226,16,Male,3.8,83.5,38.0,100.0,High School,No,69.9
+227,Student_227,18,Male,5.2,100.0,53.7,64.7,High School,No,66.6
+228,Student_228,17,Female,0.5,98.2,51.4,63.6,Bachelors,Yes,54.7
+229,Student_229,17,Female,5.3,76.3,51.9,80.8,High School,No,58.0
+230,Student_230,15,Male,0.5,72.9,95.0,81.5,Graduate,No,69.9
+231,Student_231,16,Male,1.1,76.1,65.8,62.5,Bachelors,No,61.5
+232,Student_232,18,Male,5.4,86.1,68.7,64.4,Bachelors,No,69.4
+233,Student_233,15,Female,5.5,78.7,38.4,77.6,High School,No,68.0
+234,Student_234,18,Male,2.2,75.3,55.2,58.4,Bachelors,No,41.6
+235,Student_235,16,Male,3.1,97.6,68.2,64.3,Graduate,No,68.7
+236,Student_236,17,Male,7.2,78.6,49.6,71.3,High School,Yes,68.2
+237,Student_237,17,Male,3.5,100.0,78.6,83.9,High School,No,66.9
+238,Student_238,16,Male,9.0,81.1,47.0,61.5,High School,No,83.8
+239,Student_239,16,Female,4.5,100.0,60.7,44.2,High School,No,61.2
+240,Student_240,17,Female,5.3,84.3,56.2,43.2,Bachelors,No,59.2
+241,Student_241,15,Female,7.7,91.6,67.5,52.4,Bachelors,Yes,77.0
+242,Student_242,17,Female,4.8,71.3,55.4,51.6,Bachelors,Yes,48.4
+243,Student_243,15,Female,2.5,69.8,60.9,67.8,High School,No,48.7
+244,Student_244,17,Male,4.3,85.5,61.5,53.4,High School,Yes,67.4
+245,Student_245,17,Female,4.4,91.9,54.0,60.2,High School,Yes,59.1
+246,Student_246,15,Female,1.8,80.5,72.3,59.2,Graduate,Yes,58.1
+247,Student_247,18,Male,4.0,64.6,68.6,63.8,Bachelors,No,68.1
+248,Student_248,16,Female,3.0,63.7,63.7,88.5,High School,No,66.0
+249,Student_249,18,Male,6.3,62.9,58.5,79.3,Bachelors,Yes,72.0
+250,Student_250,15,Female,4.6,58.8,76.9,70.2,High School,Yes,60.1
+251,Student_251,15,Female,3.9,81.3,61.5,63.5,High School,No,57.9
+252,Student_252,16,Female,4.3,93.5,60.4,63.9,High School,Yes,60.5
+253,Student_253,15,Female,4.9,79.8,66.6,74.6,Graduate,No,65.3
+254,Student_254,16,Female,5.7,52.9,90.4,78.2,Bachelors,No,64.2
+255,Student_255,17,Female,2.5,77.7,44.9,57.3,Bachelors,Yes,50.4
+256,Student_256,15,Female,2.4,78.0,76.5,70.5,High School,No,53.2
+257,Student_257,17,Male,6.7,100.0,36.6,41.6,High School,Yes,53.8
+258,Student_258,15,Female,3.7,62.5,68.3,73.0,Bachelors,Yes,64.0
+259,Student_259,15,Male,1.7,75.3,88.6,80.7,High School,No,63.3
+260,Student_260,17,Male,5.4,100.0,72.3,66.1,Graduate,No,87.6
+261,Student_261,18,Male,5.4,,67.6,95.4,Bachelors,No,69.9
+262,Student_262,15,Female,1.4,86.8,56.6,57.7,Bachelors,Yes,58.1
+263,Student_263,16,Male,5.0,81.4,65.5,73.0,Bachelors,Yes,72.2
+264,Student_264,18,Male,6.0,84.0,61.2,69.5,Graduate,No,71.5
+265,Student_265,18,Male,5.2,89.3,53.2,68.6,Bachelors,No,71.4
+266,Student_266,17,Male,5.8,70.3,60.7,68.4,Bachelors,No,70.3
+267,Student_267,16,Male,1.7,90.5,68.0,71.5,Graduate,Yes,68.6
+268,Student_268,16,Female,5.2,63.5,53.5,81.9,High School,No,58.7
+269,Student_269,17,Male,3.9,83.9,52.9,89.3,Graduate,No,66.8
+270,Student_270,17,Female,3.5,82.1,44.6,70.0,High School,No,47.3
+271,Student_271,16,Female,6.2,72.6,70.9,81.4,Bachelors,Yes,69.7
+272,Student_272,15,Male,7.5,79.7,73.2,60.2,Bachelors,No,70.5
+273,Student_273,15,Male,8.1,72.5,68.5,,Bachelors,Yes,70.3
+274,Student_274,18,Female,7.1,67.1,79.5,59.3,Bachelors,No,74.0
+275,Student_275,16,Male,4.3,75.8,66.3,85.3,Bachelors,No,74.8
+276,Student_276,16,Male,5.2,66.8,70.9,100.0,High School,No,63.5
+277,Student_277,16,Female,6.0,83.9,69.6,68.3,High School,No,70.5
+278,Student_278,18,Female,4.7,66.2,63.6,39.3,High School,No,47.3
+279,Student_279,15,Female,4.8,88.5,57.0,62.3,Bachelors,No,63.4
+280,Student_280,15,Male,6.1,65.8,98.2,,Bachelors,No,71.0
+281,Student_281,16,Female,4.4,73.2,58.2,77.7,High School,No,64.3
+282,Student_282,16,Female,3.0,72.5,55.0,73.5,Graduate,Yes,58.9
+283,Student_283,17,Male,3.7,95.9,71.5,84.1,High School,No,75.1
+284,Student_284,16,Female,5.8,84.0,68.8,76.8,Bachelors,No,71.3
+285,Student_285,16,Male,4.5,77.5,43.9,87.0,Bachelors,No,59.5
+286,Student_286,18,Male,5.2,86.0,81.8,82.9,High School,No,65.6
+287,Student_287,15,Female,5.8,54.7,63.6,91.3,Bachelors,No,68.6
+288,Student_288,17,Male,3.8,79.5,48.3,75.0,Bachelors,Yes,68.0
+289,Student_289,17,Male,6.0,100.0,82.8,82.7,High School,No,80.7
+290,Student_290,16,Female,5.3,81.6,74.4,65.7,Graduate,Yes,88.4
+291,Student_291,18,Female,2.0,80.8,46.0,61.6,Graduate,Yes,66.2
+292,Student_292,16,Female,7.4,86.6,91.7,93.9,Bachelors,Yes,87.2
+293,Student_293,18,Female,3.5,90.7,74.9,73.0,Graduate,Yes,71.9
+294,Student_294,16,Female,1.2,56.0,64.8,81.3,Graduate,Yes,60.6
+295,Student_295,17,Male,2.4,59.8,88.9,71.7,High School,No,53.2
+296,Student_296,17,Male,2.5,82.5,67.4,61.8,Bachelors,Yes,68.8
+297,Student_297,18,Male,4.6,71.4,64.6,70.2,Bachelors,No,66.1
+298,Student_298,16,Male,4.0,95.7,55.1,90.1,High School,Yes,70.5
+299,Student_299,16,Female,3.8,76.2,73.7,77.8,High School,No,67.8
+300,Student_300,15,Male,5.7,56.8,72.1,46.0,High School,No,67.7
+301,Student_301,16,Male,5.2,64.8,65.2,67.0,Bachelors,Yes,66.5
+302,Student_302,18,Male,5.1,47.0,53.2,95.0,Bachelors,No,60.7
+303,Student_303,15,Male,5.3,77.2,66.9,67.0,Bachelors,No,76.3
+304,Student_304,18,Female,5.7,77.7,64.0,44.8,High School,No,66.2
+305,Student_305,17,Male,0.5,74.9,45.0,96.5,High School,Yes,50.7
+306,Student_306,15,Male,3.8,92.9,42.9,79.6,Bachelors,No,63.5
+307,Student_307,16,Male,0.5,94.4,73.5,69.0,Bachelors,No,61.3
+308,Student_308,17,Male,4.6,78.0,30.0,64.8,Graduate,Yes,63.0
+309,Student_309,16,Female,4.5,54.4,68.1,85.2,Graduate,No,58.1
+310,Student_310,15,Male,6.6,87.4,57.8,62.4,Graduate,Yes,66.0
+311,Student_311,17,Male,6.9,86.7,84.6,86.1,Graduate,No,80.0
+312,Student_312,17,Male,4.9,83.7,57.6,77.6,Graduate,Yes,66.8
+313,Student_313,15,Female,3.5,91.8,74.9,73.4,Bachelors,Yes,67.3
+314,Student_314,16,Female,5.5,66.0,59.0,72.0,High School,No,64.9
+315,Student_315,15,Female,3.4,100.0,66.7,67.6,High School,No,63.7
+316,Student_316,17,Female,4.5,68.5,76.1,84.6,High School,No,66.8
+317,Student_317,17,Female,6.5,89.0,58.1,57.9,High School,No,59.2
+318,Student_318,17,Male,3.4,59.8,79.9,47.3,High School,Yes,53.1
+319,Student_319,18,Male,6.1,68.8,50.1,78.6,Graduate,Yes,74.0
+320,Student_320,18,Female,5.9,98.2,69.4,78.8,High School,Yes,79.7
+321,Student_321,16,Male,2.6,76.9,78.8,76.7,Graduate,No,63.2
+322,Student_322,15,Female,6.4,90.1,74.9,75.7,Bachelors,Yes,80.3
+323,Student_323,17,Male,5.9,82.8,93.7,65.5,Bachelors,No,89.9
+324,Student_324,18,Female,4.7,78.7,53.5,81.0,Bachelors,Yes,67.3
+325,Student_325,18,Female,3.0,96.4,44.3,69.4,High School,Yes,55.3
+326,Student_326,15,Female,2.8,77.2,50.1,,Bachelors,Yes,57.7
+327,Student_327,15,Female,3.4,58.6,74.9,65.6,High School,Yes,58.6
+328,Student_328,15,Female,5.6,70.4,72.5,98.3,Graduate,Yes,78.2
+329,Student_329,15,Female,2.6,86.6,66.5,45.7,High School,No,54.5
+330,Student_330,17,Male,5.4,84.7,48.2,77.0,High School,Yes,57.1
+331,Student_331,17,Male,2.0,61.2,76.5,46.5,Bachelors,No,46.5
+332,Student_332,16,Female,4.1,71.3,46.6,68.5,Bachelors,No,56.8
+333,Student_333,16,Male,4.7,73.0,82.4,63.9,Bachelors,No,66.8
+334,Student_334,18,Male,9.4,75.6,100.0,40.8,Bachelors,No,78.0
+335,Student_335,16,Female,1.7,63.5,70.5,75.4,High School,Yes,54.3
+336,Student_336,18,Female,7.4,72.5,73.7,64.7,Bachelors,Yes,75.6
+337,Student_337,18,Male,4.8,71.3,57.6,40.6,High School,Yes,61.1
+338,Student_338,16,Male,5.3,89.3,37.8,81.8,High School,No,62.4
+339,Student_339,15,Male,4.7,89.7,56.0,90.1,High School,No,70.0
+340,Student_340,18,Male,5.4,78.3,48.6,90.9,High School,Yes,63.8
+341,Student_341,17,Female,4.2,75.3,43.3,75.0,High School,No,59.8
+342,Student_342,16,Male,7.4,81.7,90.8,70.6,Bachelors,No,83.2
+343,Student_343,17,Male,3.6,,69.1,88.6,High School,No,70.0
+344,Student_344,17,Female,6.8,66.2,70.7,93.6,High School,No,76.3
+345,Student_345,18,Male,3.2,68.7,60.4,85.9,Bachelors,No,64.9
+346,Student_346,16,Male,4.4,72.4,62.4,56.8,High School,No,56.8
+347,Student_347,18,Female,2.4,66.0,79.5,72.8,Bachelors,No,62.1
+348,Student_348,18,Female,5.4,81.9,64.5,76.2,Graduate,Yes,81.3
+349,Student_349,15,Female,7.4,88.8,73.0,44.7,Bachelors,Yes,71.2
+350,Student_350,15,Female,4.3,61.0,62.1,76.6,Graduate,No,60.4
+351,Student_351,17,Male,4.1,80.3,59.9,100.0,High School,No,67.6
+352,Student_352,15,Female,2.3,77.4,43.9,79.0,High School,Yes,57.1
+353,Student_353,16,Female,4.0,84.1,35.3,90.6,Bachelors,No,57.2
+354,Student_354,16,Female,1.3,79.8,61.1,72.6,Bachelors,Yes,57.9
+355,Student_355,18,Female,2.7,62.6,65.8,69.0,Graduate,No,58.9
+356,Student_356,18,Female,5.0,64.9,45.7,75.3,High School,Yes,45.4
+357,Student_357,15,Female,7.1,80.4,64.5,58.6,Bachelors,No,69.5
+358,Student_358,18,Male,10.0,92.3,65.8,56.5,High School,No,77.9
+359,Student_359,15,Female,3.3,53.4,32.7,87.7,High School,Yes,49.3
+360,Student_360,17,Male,7.4,84.1,51.3,89.2,High School,Yes,82.9
+361,Student_361,18,Female,5.0,94.3,71.1,56.1,Graduate,No,65.3
+362,Student_362,18,Female,4.2,78.2,70.8,83.6,High School,Yes,62.8
+363,Student_363,15,Female,5.4,86.6,47.7,68.8,Graduate,Yes,54.8
+364,Student_364,18,Female,4.6,71.6,67.4,74.8,Bachelors,No,62.7
+365,Student_365,15,Male,4.7,78.6,80.3,76.4,Bachelors,Yes,70.8
+366,Student_366,17,Female,3.7,60.5,76.7,83.9,Bachelors,Yes,63.4
+367,Student_367,16,Female,1.7,51.9,63.6,71.2,Graduate,Yes,62.5
+368,Student_368,16,Male,1.4,91.3,58.0,89.7,High School,No,64.3
+369,Student_369,15,Male,5.8,68.2,55.6,74.3,High School,Yes,64.5
+370,Student_370,18,Male,3.9,74.5,72.0,78.7,Bachelors,Yes,66.1
+371,Student_371,16,Female,3.3,63.4,67.9,58.3,High School,Yes,61.9
+372,Student_372,17,Male,4.5,63.1,74.4,100.0,High School,Yes,68.9
+373,Student_373,16,Female,6.1,77.9,67.0,76.6,High School,Yes,65.7
+374,Student_374,16,Male,4.9,71.2,77.3,80.0,High School,Yes,58.5
+375,Student_375,18,Female,3.2,84.5,66.4,47.5,High School,Yes,55.5
+376,Student_376,15,Male,7.0,85.4,76.8,58.5,High School,Yes,78.4
+377,Student_377,17,Female,7.7,83.9,78.1,87.3,Graduate,No,99.2
+378,Student_378,17,Male,5.5,82.9,52.9,74.0,High School,Yes,66.5
+379,Student_379,16,Female,6.4,98.9,37.9,43.2,Graduate,Yes,64.2
+380,Student_380,16,Female,7.0,67.2,88.2,84.5,Graduate,No,74.2
+381,Student_381,15,Female,6.8,79.3,68.8,62.4,High School,No,71.9
+382,Student_382,18,Female,5.7,93.6,39.3,89.8,Bachelors,No,59.6
+383,Student_383,18,Male,5.7,95.2,54.3,68.8,Bachelors,Yes,75.4
+384,Student_384,15,Male,5.5,62.9,76.6,72.9,Bachelors,Yes,74.8
+385,Student_385,15,Male,2.3,76.3,60.8,86.5,High School,Yes,62.6
+386,Student_386,15,Male,5.9,96.3,57.3,57.4,High School,Yes,67.1
+387,Student_387,15,Female,1.8,86.1,86.0,56.1,High School,Yes,64.7
+388,Student_388,18,Female,2.9,82.3,49.3,67.2,Bachelors,No,58.5
+389,Student_389,18,Female,7.1,77.4,53.0,81.6,Graduate,Yes,72.1
+390,Student_390,15,Female,6.2,75.4,68.2,51.4,Bachelors,No,77.6
+391,Student_391,17,Female,7.5,83.5,70.9,46.6,Bachelors,Yes,71.8
+392,Student_392,15,Female,4.0,77.0,72.4,81.5,Graduate,Yes,77.5
+393,Student_393,16,Male,2.2,79.5,78.7,61.6,Bachelors,No,46.5
+394,Student_394,17,Male,4.0,80.9,68.0,64.5,High School,No,69.0
+395,Student_395,17,Female,4.7,71.9,72.3,44.0,Graduate,Yes,74.8
+396,Student_396,18,Female,4.7,86.4,61.1,60.5,High School,No,62.3
+397,Student_397,15,Male,6.8,100.0,65.9,69.9,High School,Yes,79.8
+398,Student_398,15,Female,3.8,58.7,66.6,83.0,Bachelors,Yes,66.9
+399,Student_399,16,Female,5.2,83.9,68.2,59.2,Graduate,No,66.6
+400,Student_400,16,Male,2.5,70.9,76.6,93.2,High School,Yes,67.8
+401,Student_401,18,Male,5.4,86.9,73.3,60.4,Bachelors,Yes,67.4
+402,Student_402,18,Female,4.5,80.6,65.7,60.4,High School,No,57.6
+403,Student_403,16,Female,3.0,89.1,52.9,91.5,High School,Yes,71.0
+404,Student_404,18,Male,4.0,94.1,66.0,73.0,High School,Yes,73.7
+405,Student_405,16,Female,4.1,82.3,64.6,62.3,Bachelors,Yes,61.4
+406,Student_406,17,Male,4.0,93.6,67.9,67.8,Graduate,No,66.7
+407,Student_407,16,Female,8.0,51.9,98.1,88.9,High School,No,73.8
+408,Student_408,15,Male,4.3,99.1,57.1,90.5,High School,Yes,75.6
+409,Student_409,18,Female,4.0,84.5,71.3,,High School,Yes,60.2
+410,Student_410,15,Male,0.5,92.9,81.0,69.4,High School,No,60.9
+411,Student_411,15,Male,2.7,65.4,66.5,71.3,Bachelors,Yes,64.3
+412,Student_412,15,Female,4.0,70.0,100.0,56.2,Bachelors,No,67.4
+413,Student_413,16,Male,3.1,81.8,59.3,69.2,Bachelors,No,66.9
+414,Student_414,15,Male,7.3,79.8,69.9,70.1,High School,Yes,72.1
+415,Student_415,15,Male,4.2,83.4,53.0,86.0,Bachelors,Yes,66.8
+416,Student_416,17,Female,7.1,93.0,59.7,86.9,High School,Yes,71.6
+417,Student_417,18,Female,4.6,58.8,68.7,65.4,High School,Yes,65.9
+418,Student_418,15,Female,4.6,91.7,77.7,67.0,Graduate,Yes,72.0
+419,Student_419,16,Male,4.3,80.1,69.8,79.3,Bachelors,No,70.5
+420,Student_420,17,Male,4.5,77.6,83.9,61.8,Graduate,Yes,72.9
+421,Student_421,18,Male,7.9,62.3,63.6,78.2,Graduate,No,68.9
+422,Student_422,17,Female,0.5,86.0,60.0,68.8,Bachelors,No,51.0
+423,Student_423,18,Female,0.5,51.0,100.0,56.4,Graduate,Yes,66.7
+424,Student_424,17,Female,3.4,87.8,70.9,56.6,Bachelors,Yes,66.7
+425,Student_425,16,Female,4.5,62.1,54.2,90.3,High School,Yes,55.7
+426,Student_426,15,Male,5.9,80.6,54.6,67.8,High School,No,65.7
+427,Student_427,18,Female,5.4,78.6,50.9,93.0,High School,Yes,67.2
+428,Student_428,18,Male,3.7,94.0,79.0,62.8,High School,No,86.9
+429,Student_429,15,Male,6.5,77.9,59.5,74.1,High School,No,69.1
+430,Student_430,17,Male,6.6,71.7,66.9,100.0,Bachelors,No,73.8
+431,Student_431,15,Male,4.9,73.9,64.0,55.2,Bachelors,No,70.8
+432,Student_432,17,Male,6.4,95.3,76.0,43.4,Bachelors,No,61.4
+433,Student_433,18,Male,5.0,86.4,52.3,88.0,High School,No,66.8
+434,Student_434,15,Male,3.4,75.4,48.9,58.4,Bachelors,No,67.2
+435,Student_435,16,Female,5.9,77.2,68.4,69.7,High School,No,66.2
+436,Student_436,15,Male,4.7,61.2,74.0,61.8,High School,No,48.9
+437,Student_437,17,Male,4.5,84.7,70.0,73.8,High School,No,63.7
+438,Student_438,18,Female,7.4,58.9,52.9,56.7,High School,No,68.7
+439,Student_439,15,Female,0.5,89.0,75.2,67.5,High School,No,58.2
+440,Student_440,16,Female,1.7,81.5,53.8,76.3,Graduate,No,54.8
+441,Student_441,18,Male,2.1,100.0,57.2,55.9,Bachelors,No,55.2
+442,Student_442,16,Female,3.8,66.8,50.8,60.2,Bachelors,Yes,53.7
+443,Student_443,15,Male,4.0,78.8,84.5,65.1,High School,No,67.2
+444,Student_444,16,Male,1.5,100.0,74.5,50.0,Graduate,No,71.9
+445,Student_445,17,Female,2.5,94.3,74.1,64.1,Bachelors,No,71.2
+446,Student_446,17,Female,2.8,71.6,83.7,71.7,High School,Yes,65.7
+447,Student_447,16,Female,9.4,82.7,100.0,64.4,Bachelors,No,79.9
+448,Student_448,18,Female,8.1,80.0,39.4,66.2,Bachelors,No,60.8
+449,Student_449,17,Female,3.7,83.4,53.9,69.7,Bachelors,No,64.8
+450,Student_450,16,Male,3.8,71.6,55.8,60.8,High School,No,46.6
+451,Student_451,18,Male,2.2,78.9,52.2,79.7,Bachelors,No,56.5
+452,Student_452,18,Male,0.7,60.8,48.8,90.1,High School,No,49.2
+453,Student_453,16,Male,4.3,81.6,60.5,63.5,High School,Yes,55.4
+454,Student_454,15,Female,2.5,85.4,46.8,76.8,High School,No,49.3
+455,Student_455,17,Male,4.3,77.3,70.0,66.6,Graduate,Yes,69.6
+456,Student_456,17,Female,1.3,60.6,65.8,75.1,High School,No,53.3
+457,Student_457,15,Female,3.0,91.9,72.2,91.9,High School,No,74.2
+458,Student_458,17,Female,4.8,84.4,72.6,77.1,High School,Yes,73.8
+459,Student_459,18,Male,5.2,71.3,74.0,45.2,Graduate,Yes,68.4
+460,Student_460,15,Male,5.3,,59.4,76.4,Bachelors,Yes,65.3
+461,Student_461,17,Female,1.9,62.0,96.8,87.3,Graduate,No,62.1
+462,Student_462,15,Female,6.2,67.7,68.5,66.9,High School,No,61.7
+463,Student_463,17,Female,2.9,,37.1,83.9,High School,Yes,58.4
+464,Student_464,16,Female,5.8,94.7,50.0,60.3,Bachelors,No,69.5
+465,Student_465,15,Female,4.5,72.3,38.9,49.2,High School,Yes,39.6
+466,Student_466,18,Male,1.7,87.7,65.3,72.0,Graduate,No,58.7
+467,Student_467,15,Female,3.9,73.5,63.2,45.4,Graduate,Yes,69.4
+468,Student_468,17,Male,5.2,83.0,58.0,66.6,Bachelors,Yes,68.6
+469,Student_469,15,Female,5.7,78.3,95.2,88.0,Graduate,Yes,76.4
+470,Student_470,18,Female,4.2,90.5,73.2,43.3,Bachelors,No,78.5
+471,Student_471,17,Female,7.6,73.6,75.9,52.1,High School,No,68.9
+472,Student_472,18,Male,6.5,61.1,51.0,55.6,Bachelors,No,62.7
+473,Student_473,16,Male,4.0,63.4,50.0,69.1,High School,No,55.8
+474,Student_474,16,Female,6.0,73.6,65.6,64.9,Graduate,Yes,70.4
+475,Student_475,17,Male,8.4,65.0,67.6,89.6,High School,Yes,72.2
+476,Student_476,18,Male,8.4,84.9,37.2,83.4,High School,Yes,85.5
+477,Student_477,18,Male,2.0,74.4,62.3,76.9,Bachelors,No,64.2
+478,Student_478,15,Male,2.6,100.0,65.2,72.0,High School,Yes,69.9
+479,Student_479,17,Male,7.5,59.1,61.8,75.5,High School,No,69.8
+480,Student_480,15,Female,2.4,82.4,52.8,57.9,Bachelors,Yes,51.1
+481,Student_481,16,Male,1.9,,56.9,82.0,High School,Yes,65.4
+482,Student_482,18,Male,3.5,74.1,62.3,54.4,Bachelors,Yes,54.7
+483,Student_483,16,Male,5.3,81.7,66.4,81.7,High School,Yes,71.9
+484,Student_484,18,Male,4.3,52.1,74.1,86.6,High School,No,51.1
+485,Student_485,16,Male,3.2,82.8,81.2,73.0,High School,No,52.3
+486,Student_486,15,Female,3.2,100.0,60.6,67.5,Bachelors,Yes,69.5
+487,Student_487,16,Male,3.1,74.6,58.2,75.6,Graduate,No,58.1
+488,Student_488,17,Male,2.7,83.1,71.6,29.9,High School,No,40.3
+489,Student_489,18,Male,9.1,92.3,74.2,74.2,Graduate,No,91.2
+490,Student_490,17,Male,5.1,78.0,58.5,68.4,Bachelors,No,77.8
+491,Student_491,18,Male,6.3,73.0,76.9,69.3,Bachelors,No,80.3
+492,Student_492,18,Male,3.5,52.7,79.7,79.9,Bachelors,No,60.3
+493,Student_493,18,Female,4.1,87.7,84.4,69.0,Bachelors,No,71.4
+494,Student_494,17,Male,3.1,78.6,91.7,54.0,Graduate,No,73.4
+495,Student_495,16,Female,0.5,67.8,52.0,68.0,Bachelors,No,54.7
+496,Student_496,16,Male,1.7,81.5,65.2,70.9,Bachelors,Yes,58.6
+497,Student_497,15,Male,0.9,73.0,65.2,71.6,High School,No,51.6
+498,Student_498,16,Male,0.5,73.7,63.5,72.3,High School,No,52.0
+499,Student_499,18,Female,2.1,87.3,55.3,84.6,Bachelors,Yes,66.8
+500,Student_500,16,Female,7.1,63.9,42.7,54.8,High School,No,56.7
+362,Student_362,18,Female,4.2,78.2,70.8,83.6,High School,Yes,62.8
+74,Student_74,15,Female,5.3,54.4,60.5,64.0,Graduate,Yes,64.6
+375,Student_375,18,Female,3.2,84.5,66.4,47.5,High School,Yes,55.5
+156,Student_156,17,Female,0.6,84.4,37.6,35.9,High School,Yes,44.7
+105,Student_105,18,Male,0.8,82.7,51.8,36.6,High School,No,52.5

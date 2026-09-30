@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Student Performance System{% endblock %}</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+{% if session.get('user_id') %}
+<nav class="navbar navbar-expand-lg navbar-dark app-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="{{ url_for('index') }}"><i class="fa-solid fa-graduation-cap me-2"></i>Student Performance System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link {% if request.endpoint == 'index' %}active{% endif %}" href="{{ url_for('index') }}">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.endpoint in ['students', 'add_student', 'edit_student'] %}active{% endif %}" href="{{ url_for('students') }}">Students</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.endpoint == 'analysis' %}active{% endif %}" href="{{ url_for('analysis') }}">Analysis</a></li>
+        <li class="nav-item"><a class="nav-link {% if request.endpoint == 'prediction' %}active{% endif %}" href="{{ url_for('prediction') }}">Prediction</a></li>
+        <li class="nav-item"><a class="nav-link profile-link" href="{{ url_for('profile') }}"><span class="avatar">{{ (session.get('user_name') or session.get('user_email', '?'))[:1].upper() }}</span>{{ session.get('user_name') or session.get('user_email') }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endif %}
+
+<div class="{% if session.get('user_id') %}container my-4 content-shell{% else %}auth-shell{% endif %}">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert {{ 'alert-danger' if category == 'error' else 'alert-success' }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

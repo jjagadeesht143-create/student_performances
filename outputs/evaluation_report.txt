@@ -1,0 +1,30 @@
+============================================================
+REGRESSION EVALUATION (LinearRegression)
+============================================================
+MAE : 5.0226
+MSE : 39.5646
+RMSE: 6.2900
+R^2 : 0.5483
+
+============================================================
+CLASSIFICATION EVALUATION (LogisticRegression)
+============================================================
+Accuracy : 0.7600
+Precision: 0.7616
+Recall   : 0.7600
+F1 Score : 0.7594
+
+Full classification report:
+                   precision    recall  f1-score   support
+
+Needs Improvement       0.29      0.50      0.36         4
+          Average       0.85      0.82      0.83        67
+             Good       0.68      0.70      0.69        27
+        Excellent       0.00      0.00      0.00         2
+
+         accuracy                           0.76       100
+        macro avg       0.45      0.51      0.47       100
+     weighted avg       0.76      0.76      0.76       100
+
+
+Saved confusion matrix plot to outputs/figures/confusion_matrix.png
